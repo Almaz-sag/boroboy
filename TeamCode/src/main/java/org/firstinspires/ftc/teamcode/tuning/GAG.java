@@ -18,8 +18,8 @@ import com.qualcomm.robotcore.util.Range;
 
 import org.firstinspires.ftc.teamcode.MecanumDrive;
 
-@Autonomous(name= "GIGGER")
-public class GOLDENDIGGER extends LinearOpMode {
+@Autonomous(name= "GaGger")
+public class GAG extends LinearOpMode {
 
     private DcMotorEx launcher;
     private DcMotorEx launcher2;
@@ -171,35 +171,18 @@ public class GOLDENDIGGER extends LinearOpMode {
 
         Actions.runBlocking(
                 drive.actionBuilder(new Pose2d(0, 0, 0))
-                        .stopAndAdd(new LauncherCmd(1550))
-                        .waitSeconds(2)
+                        .stopAndAdd(new LauncherCmd(1525))
+                        .waitSeconds(7)
                         .stopAndAdd(new Stopper(stopper, 0))
                         .waitSeconds(0.1)
                         .stopAndAdd(new Intake(intake1, intake2, 1))
                         .waitSeconds(0.5)
                         .stopAndAdd(new Stopper(stopper, 0.15))
                         .stopAndAdd(new Intake(intake1, intake2, 0))
-                        .strafeToLinearHeading(new Vector2d(5, 11), Math.toRadians(105))
+                        .strafeToLinearHeading(new Vector2d(10, 0), Math.toRadians(90))
                         .stopAndAdd(new Intake(intake1, intake2, 1))
-                        .strafeToLinearHeading(new Vector2d(-7, 43), Math.toRadians(135))
-                        .waitSeconds(1.5)
-                        .strafeToLinearHeading(new Vector2d(10, 36), Math.toRadians(120))
-                        .strafeToLinearHeading(new Vector2d(0, 43), Math.toRadians(180))
-                        .waitSeconds(1.5)
-                        .strafeToLinearHeading(new Vector2d(10, 24), Math.toRadians(90))
-                        .stopAndAdd(new Intake(intake1, intake2, 0))
-                        .strafeToLinearHeading(new Vector2d(0, 0), Math.toRadians(0))
-                        .waitSeconds(2)
-                        .stopAndAdd(new Stopper(stopper, 0))
-                        .waitSeconds(0.1)
-                        .stopAndAdd(new Intake(intake1, intake2, 1))
-                        .waitSeconds(0.5)
-                        .stopAndAdd(new Stopper(stopper, 0.15))
-                        .stopAndAdd(new Intake(intake1, intake2, 0))
-                        .strafeToLinearHeading(new Vector2d(10, 24), Math.toRadians(0))
-                        .strafeToLinearHeading(new Vector2d(43, 26), Math.toRadians(0))
-                        .strafeToLinearHeading(new Vector2d(100, 24), Math.toRadians(-90))
-                        .strafeToLinearHeading(new Vector2d(100, 40), Math.toRadians(-90))
+                        .strafeToLinearHeading(new Vector2d(12, -50), Math.toRadians(90))
+                        .strafeToLinearHeading(new Vector2d(7, -58), Math.toRadians(90))
                         .build()
         );
     }
